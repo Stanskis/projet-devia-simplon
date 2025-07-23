@@ -5,6 +5,6 @@ données = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSC4Kusf
 
 figure = px.pie(données, values='qte', names='region', title='quantité vendue par région')
 
-figure.write_html('ventes-par-region.html')
+figure.write_html('views/ventes-par-region.html')
 
 print('ventes-par-région.html généré avec succès !')
