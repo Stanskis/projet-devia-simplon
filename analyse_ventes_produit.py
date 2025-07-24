@@ -2,10 +2,10 @@ import plotly.express as px
 import pandas as pd
 
 try:
-    données = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSC4KusfFzvOsr8WJRgozzsCxrELW4G4PopUkiDbvrrV2lg0S19-zeryp02MC9WYSVBuzGCUtn8ucZW/pub?output=csv')
+    donnees = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSC4KusfFzvOsr8WJRgozzsCxrELW4G4PopUkiDbvrrV2lg0S19-zeryp02MC9WYSVBuzGCUtn8ucZW/pub?output=csv')
 
     # Les ventes par produit
-    df_ventes_produit = données.groupby('produit').agg(
+    df_ventes_produit = donnees.groupby('produit').agg(
         Qte_par_produit=('qte','sum')
     ).reset_index()
 
